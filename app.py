@@ -1,8 +1,9 @@
 import streamlit as st
-from huggingface_hub import InferenceClient
+from groq import Groq
 
-client = InferenceClient(api_key=st.secrets["HF_TOKEN"])
-MODEL = "HuggingFaceH4/zephyr-7b-beta"
+# Groq Client initialisieren (benötigt 'pip install groq')
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+MODEL = "llama-3.1-8b-instant"
 
 SYSTEM = (
     "Du bist ein neutraler Assistent für lokale politische Entscheidungen. "
@@ -26,7 +27,11 @@ if prompt := st.chat_input("Eure Frage zu einer lokalen Entscheidung"):
 
     msgs = [{"role": "system", "content": SYSTEM}] + st.session_state.messages
     try:
-        r = client.chat_completion(model=MODEL, messages=msgs, max_tokens=500)
+        r = client.chat.completions.create(
+            model=MODEL,
+            messages=msgs,
+            max_tokens=500
+        )
         answer = r.choices[0].message.content
     except Exception as e:
         answer = f"Fehler: {e}"
