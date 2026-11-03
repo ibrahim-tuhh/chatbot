@@ -29,7 +29,7 @@ if prompt := st.chat_input("Eure Frage zu einer lokalen Entscheidung"):
         r = client.chat_completion(model=MODEL, messages=msgs, max_tokens=500)
         answer = r.choices[0].message.content
     except Exception as e:
-    answer = f"Fehler: {e}"
+        answer = f"Fehler: {e}"
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
     with st.chat_message("assistant"):
