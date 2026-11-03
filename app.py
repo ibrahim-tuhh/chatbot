@@ -3,7 +3,7 @@ from groq import Groq
 
 # Benutzt jetzt den korrekten Key-Namen aus den Secrets
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "llama3-8b-8192"
 
 SYSTEM = (
     "Du bist ein neutraler Assistent für lokale politische Entscheidungen. "
