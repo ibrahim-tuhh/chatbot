@@ -1,9 +1,9 @@
 import streamlit as st
 from groq import Groq
 
-# Groq Client initialisieren (benötigt 'pip install groq')
-client = Groq(api_key=st.secrets["HF_TOKEN"])
-MODEL = "llama-3.1-8b-instant"
+# Benutzt jetzt den korrekten Key-Namen aus den Secrets
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+MODEL = "llama-3.3-70b-versatile"
 
 SYSTEM = (
     "Du bist ein neutraler Assistent für lokale politische Entscheidungen. "
