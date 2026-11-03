@@ -3,7 +3,7 @@ from groq import Groq
 
 # Benutzt jetzt den korrekten Key-Namen aus den Secrets
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
-MODEL = "llama3-8b-8192"
+MODEL = "openai/gpt-oss-20b"
 
 SYSTEM = (
     "Du bist ein neutraler Assistent für lokale politische Entscheidungen. "
