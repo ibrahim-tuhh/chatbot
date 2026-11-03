@@ -3,7 +3,7 @@ from groq import Groq
 
 # Groq Client initialisieren (benötigt 'pip install groq')
 client = Groq(api_key=st.secrets["HF_TOKEN"])
-MODEL = "llama-3.1-8b-instant"
+MODEL = "llama-3.3-70b-versatile"
 
 SYSTEM = (
     "Du bist ein neutraler Assistent für lokale politische Entscheidungen. "
