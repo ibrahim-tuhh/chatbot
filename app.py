@@ -2,7 +2,7 @@ import streamlit as st
 from huggingface_hub import InferenceClient
 
 client = InferenceClient(api_key=st.secrets["HF_TOKEN"])
-MODEL = "Qwen/Qwen2.5-7B-Instruct"
+MODEL = "meta-llama/Llama-3.2-3B-Instruct"
 
 SYSTEM = (
     "Du bist ein neutraler Assistent für lokale politische Entscheidungen. "
