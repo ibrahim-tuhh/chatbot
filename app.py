@@ -1,10 +1,8 @@
 import streamlit as st
 from groq import Groq
 
-# 1. Groq als API-Anbieter initialisieren
+# Benutzt jetzt den korrekten Key-Namen aus den Secrets
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
-
-# 2. Ein aktives Modell wählen, das auf Groq läuft
 MODEL = "llama-3.3-70b-versatile"
 
 SYSTEM = (
