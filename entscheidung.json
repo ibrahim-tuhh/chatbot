@@ -1,0 +1,12 @@
+[
+  {
+    "titel": "BEISPIEL: Titel der Vorlage",
+    "ebene": "Bezirk",
+    "bezirk": "Altona",
+    "thema": "Verkehr",
+    "status": "in Beratung",
+    "datum": "bitte aus offizieller Quelle übernehmen",
+    "beschreibung": "Neutrale Kurzbeschreibung in 2-3 Sätzen.",
+    "quelle": "https://..."
+  }
+]
