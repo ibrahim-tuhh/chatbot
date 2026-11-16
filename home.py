@@ -120,7 +120,7 @@ with col1:
             </div>
         """, unsafe_allow_html=True)
         if st.button("Zur Übersicht →", use_container_width=True, type="primary"):
-            st.switch_page("pages/entscheidungen.py")
+            st.switch_page("entscheidungen.py")
 
 with col2:
     with st.container(border=True):
@@ -133,7 +133,7 @@ with col2:
             </div>
         """, unsafe_allow_html=True)
         if st.button("Chat starten →", use_container_width=True, type="primary"):
-            st.switch_page("pages/chatbot.py")
+            st.switch_page("chatbot.py")
 
 # --- DEZENTER FOOTER HINWEIS ---
 st.markdown("""
