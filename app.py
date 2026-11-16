@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Meine KI, meine Stimme?", page_icon="🗳️", layout="centered")
 
 # Seiten definieren
-home_page = st.Page("pages/home.py", title="Startseite", icon="🏠", default=True)
+home_page = st.Page("home.py", title="Startseite", icon="🏠", default=True)
 entscheidungen_page = st.Page("pages/entscheidungen.py", title="Entscheidungen vor Ort", icon="📋")
 chatbot_page = st.Page("pages/chatbot.py", title="KI-Diskussionspartner", icon="🤖")
 
