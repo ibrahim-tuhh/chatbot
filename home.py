@@ -26,4 +26,4 @@ with col2:
             "und hilft dir, deine eigenen Prioritäten abzuwägen."
         )
         if st.button("Chat starten", use_container_width=True, type="primary"):
-            st.switch_page("pages/chatbot.py")
+            st.switch_page("chatbot.py")
