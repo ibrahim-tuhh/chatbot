@@ -15,7 +15,6 @@ MODEL = "openai/gpt-oss-20b"
 
 @@ -11,20 +18,34 @@
 "empfiehl keine Parteien und überlasse die Entscheidung der Person."
-)
 
 # 3. Seitenleiste (Sidebar) mit Reset-Button
 with st.sidebar:
