@@ -13,9 +13,6 @@ if "GROQ_API_KEY" not in st.secrets:
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 MODEL = "openai/gpt-oss-20b"
 
-@@ -11,20 +18,34 @@
-"empfiehl keine Parteien und überlasse die Entscheidung der Person."
-
 # 3. Seitenleiste (Sidebar) mit Reset-Button
 with st.sidebar:
     st.header("Einstellungen")
