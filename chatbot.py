@@ -17,7 +17,7 @@ SYSTEM = (
 # 2. Seitenleiste (Sidebar) mit Reset- und Zurück-Button
 with st.sidebar:
     if st.button("🏠 Zurück zur Startseite", use_container_width=True):
-        st.switch_page("pages/home.py")
+        st.switch_page("home.py")
     st.divider()
     st.header("Einstellungen")
     st.write("Verwalten Sie hier den Verlauf Ihrer Diskussion.")
