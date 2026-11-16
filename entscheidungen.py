@@ -4,7 +4,7 @@ st.title("📋 Anstehende Entscheidungen")
 
 # Zurück-Button oben
 if st.button("← Zurück zur Startseite"):
-    st.switch_page("pages/home.py")
+    st.switch_page("home.py")
 
 st.markdown("---")
 
@@ -25,10 +25,10 @@ if ort != "Bitte wählen...":
         if st.button("Dieses Thema mit der KI diskutieren", key="topic_1"):
             # Optional: Thema direkt an den Chat übergeben
             st.session_state.preset_topic = f"In {ort} wird über den Ausbau der Fahrradstraßen in der Innenstadt abgestimmt. Hilf mir beim Abwägen."
-            st.switch_page("pages/chatbot.py")
+            st.switch_page("chatbot.py")
 
     with st.expander("🏫 Neubau vs. Sanierung der Gesamtschule"):
         st.write("**Worum geht es?** Entscheidung über die Verwendung der Haushaltsmittel für das kommende Jahr.")
         if st.button("Dieses Thema mit der KI diskutieren", key="topic_2"):
             st.session_state.preset_topic = f"In {ort} geht es um Neubau vs. Sanierung der Gesamtschule. Was sind die wichtigsten Abwägungen?"
-            st.switch_page("pages/chatbot.py")
+            st.switch_page("chatbot.py")
