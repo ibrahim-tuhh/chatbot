@@ -16,7 +16,7 @@ with col1:
             "Bürgerentscheide oder Ratsthemen in deinem Ort an."
         )
         if st.button("Zur Übersicht", use_container_width=True, type="primary"):
-            st.switch_page("pages/entscheidungen.py")
+            st.switch_page("entscheidungen.py")
 
 with col2:
     with st.container(border=True):
