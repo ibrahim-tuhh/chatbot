@@ -51,7 +51,7 @@ if prompt:
         r = client.chat.completions.create(
             model=MODEL,
             messages=msgs,
-            max_tokens=500
+            max_tokens=2500
         )
         answer = r.choices[0].message.content
     except Exception as e:
