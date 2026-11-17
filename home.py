@@ -1,9 +1,7 @@
 import streamlit as st
 
-# Custom CSS für modernes SaaS-/Web-App-Design
 st.markdown("""
 <style>
-    /* Standard Streamlit Header & Padding aufräumen */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     .block-container {
@@ -11,8 +9,6 @@ st.markdown("""
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
-
-    /* Hero Section */
     .hero-badge {
         display: inline-block;
         background-color: #DBEAFE;
@@ -39,14 +35,12 @@ st.markdown("""
         text-align: center;
         line-height: 1.6;
     }
-
-    /* Karten-Styling (Streamlit Container mit Border) */
     div[data-testid="stVerticalBlockBorderWrapper"] {
         background-color: #FFFFFF;
         border: 1px solid #E2E8F0 !important;
         border-radius: 16px !important;
         padding: 1.5rem !important;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         height: 100%;
     }
@@ -55,8 +49,6 @@ st.markdown("""
         box-shadow: 0 12px 20px -5px rgba(37, 99, 235, 0.12);
         border-color: #93C5FD !important;
     }
-
-    /* Icon-Box in den Karten */
     .icon-box {
         width: 48px;
         height: 48px;
@@ -69,7 +61,6 @@ st.markdown("""
     }
     .icon-blue { background-color: #EFF6FF; }
     .icon-indigo { background-color: #EEF2FF; }
-
     .card-title {
         font-size: 1.35rem;
         font-weight: 700;
@@ -80,21 +71,17 @@ st.markdown("""
         font-size: 0.98rem;
         color: #64748B;
         line-height: 1.55;
-        min-height: 85px; /* Hält beide Buttons auf derselben Höhe */
+        min-height: 85px;
         margin-bottom: 1.2rem;
     }
-
-    /* Buttons abrunden */
     .stButton > button {
         border-radius: 10px !important;
         padding: 0.6rem 1.2rem !important;
         font-weight: 600 !important;
-        transition: all 0.2s ease !important;
     }
 </style>
 """, unsafe_allow_html=True)
 
-# --- HERO BEREICH ---
 st.markdown("""
 <div style="text-align: center;">
     <span class="hero-badge">Neutral • Transparent • Lokal</span>
@@ -102,11 +89,10 @@ st.markdown("""
 <h1 class="hero-title">Meine KI, meine Stimme?</h1>
 <p class="hero-subtitle">
     Informiere dich unabhängig über anstehende Abstimmungen in deiner Gemeinde 
-    und wäge Pro- und Contra-Argumente in Ruhe ab – ohne Wahlempfehlung.
+    und steuere selbst, wie viel Unterstützung deine KI übernimmt.
 </p>
 """, unsafe_allow_html=True)
 
-# --- AUSWAHL-KARTEN ---
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
@@ -128,16 +114,15 @@ with col2:
             <div class="icon-box icon-indigo">💬</div>
             <div class="card-title">Mit dem Chatbot sprechen</div>
             <div class="card-text">
-                Stelle deine eigenen Fragen zu einem lokalen Thema. Die KI beleuchtet 
-                verschiedene Perspektiven und hilft dir, deine Prioritäten zu sortieren.
+                Starte im reinen Informationsmodus und schalte bei Bedarf Diskussion 
+                oder Handlungsvorschläge kontrolliert frei.
             </div>
         """, unsafe_allow_html=True)
         if st.button("Chat starten →", use_container_width=True, type="primary"):
             st.switch_page("chatbot.py")
 
-# --- DEZENTER FOOTER HINWEIS ---
 st.markdown("""
 <p style="text-align: center; color: #94A3B8; font-size: 0.85rem; margin-top: 3rem;">
-    🔒 Deine Eingaben werden neutral verarbeitet. Diese Plattform gibt keine Wahlempfehlungen ab.
+    🔒 Standardmäßig arbeitet die KI rein informierend. Erweiterte Stufen müssen aktiv freigeschaltet werden.
 </p>
 """, unsafe_allow_html=True)
